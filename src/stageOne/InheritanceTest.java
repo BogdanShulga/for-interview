@@ -9,7 +9,10 @@ public class InheritanceTest {
         A aClass = new A();
         B bClass = new B();
         A aBClass = new B();
-//        B bAClass = new A();
+//        if (bClass instanceof A) {
+//
+//            bClass = (B) aClass;
+//        }
         System.out.println("aClass.m " + aClass.m);
         System.out.println("aClass.k " + aClass.k);
         aClass.method();

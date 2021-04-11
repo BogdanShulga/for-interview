@@ -6,7 +6,7 @@ public class QuickSortArray {
         int j, temp;
         int pivot = arr[r];
         for (j = l; j < r; j++) {
-            if (arr[j] > pivot) {
+            if (arr[j] < pivot) {
                 i++;
                 temp = arr[i];
                 arr[i] = arr[j];

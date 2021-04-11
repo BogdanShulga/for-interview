@@ -4,11 +4,11 @@ public class MyGenericStackArray<T> {
 
     int size;
     int top;
-    public static final int CAPACITY = 2;
+    public static final int INITIAL_CAPACITY = 2;
     T[] array;
 
     public MyGenericStackArray() {
-        this(CAPACITY);
+        this(INITIAL_CAPACITY);
     }
 
     public MyGenericStackArray(int cap) {
@@ -38,7 +38,7 @@ public class MyGenericStackArray<T> {
     }
 
     public boolean isEmpty() {
-        return size == 0;
+        return top < 0;
     }
 
     public T peek() {
@@ -47,6 +47,10 @@ public class MyGenericStackArray<T> {
     }
 
     public static void main(String[] args) {
-
+        MyGenericStackArray<Integer> g = new MyGenericStackArray<>();
+        g.push(5);
+        g.pop();
+        g.pop();
+        g.pop();
     }
 }

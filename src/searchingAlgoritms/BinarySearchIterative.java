@@ -28,7 +28,7 @@ public class BinarySearchIterative {
     }
 
     // Driver method to test above
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         BinarySearchIterative ob = new BinarySearchIterative();
         int[] arr = { 2, 3, 4, 10, 40 };

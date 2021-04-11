@@ -5,21 +5,23 @@ public class MyGenericStackLinkedList<T> {
     private Node<T> top;
 
     public MyGenericStackLinkedList() {
-
         top = null;
     }
 
     public void push(T e) {
         Node<T> node = new Node<>(e);
-        node.setReference(top);
+        node.next = top;
         top = node;
+        System.out.println(node.value + " added");
     }
     public T pop() {
         if (top==null) {
+            System.out.println("stack is empty");
             return null;
         }
-        T data = top.getValue();
-        top = top.getReference();
+        T data = top.value;
+        top = top.next;
+        System.out.println(data + " returned");
         return data;
     }
 
@@ -51,24 +53,11 @@ public class MyGenericStackLinkedList<T> {
     }
 
     private static class Node<T> {
-        public T value;
-        public Node<T> reference;
-
-        public Node(T value) {
+        T value;
+        Node<T> next;
+        Node(T value) {
             this.value = value;
-            reference = null;
-        }
-
-        public T getValue() {
-            return value;
-        }
-
-        public Node<T> getReference() {
-            return reference;
-        }
-
-        public void setReference(Node<T> reference) {
-            this.reference = reference;
+            next = null;
         }
     }
 }

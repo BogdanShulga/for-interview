@@ -6,7 +6,7 @@ public class StringIntegerCastTest {
         String b = "75";
         String c = a + b;
         System.out.println("c = " + c);
-        int k = Integer.parseInt((a + b));
+        int k = Integer.parseInt(a + b);
         System.out.println("k = " + k);
     }
 }

@@ -21,9 +21,9 @@ public class defaultVariableValues {
 //        System.out.println(d);
 //        System.out.println(f);
 
-//        ListTest listTest = new ListTest();
-//        System.out.println(listTest.k);
-//        System.out.println(listTest.l);
+        defaultVariableValues listTest = new defaultVariableValues();
+        System.out.println(listTest.k);
+        System.out.println(listTest.l);
 
 //        double h;
 //        Double s;
